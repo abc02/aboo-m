@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-title" content="ABOO商城">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-itunes-app" content="app-id=1298983446">
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <meta name="renderer" content="webkit">
+    <title>ABOO阿布跑跑-孩子去哪儿，轻松知晓</title>
+    <style>
+        html,
+        body,
+        div,
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            padding: 0;
+            margin: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-weight: normal;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page01 {
+            height: 80vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            background-image: url('./assets/background.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-y: bottom;
+        }
+
+        .page01 .center {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            justify-content: space-between;
+        }
+
+        .bg {
+            width: 66px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-y: 50%;
+        }
+
+        .page01 .left {
+            background-image: url('./assets/Left.png');
+        }
+
+        .page01 .right {
+            background-image: url('./assets/Right.png');
+        }
+
+        .page01 .center .title { 
+            font-weight: bold;
+            font-size: .9rem;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 1.2px;
+            margin-top: 10vh;
+        }
+
+        .page01 .center .buttons {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+
+        .page01 .center .buttons .button {
+            display: block;
+            background-color: #011231;
+            color: white;
+            font-size: .9rem;
+            padding: 7px 10px;
+            border-radius: 6px;
+            margin: 0 3vw;
+        }
+
+        .page01 .center .homePage {
+            width: 128px;
+            height: 248px;
+            background-image: url('./assets/home_page.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+            top: 68px;
+        }
+
+        .page02 {
+            height: 50vh;
+            background-color: #4e8fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .page02 .left,
+        .page02 .right {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            padding: 3vh;
+        }
+
+        .page02 .left {
+            color: white;
+            font-size: .9rem;
+            line-height: 1.2;
+            letter-spacing: 1.2px;
+        }
+
+        .page02 .right {
+            width: 171px;
+            height: 128px;
+            background-image: url('./assets/work.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .page03>.title {
+            font-weight: bold;
+            font-size: 1.3rem;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 1.2px;
+            margin: 10vh 0;
+        }
+
+        .page03>.left,
+        .page03>.right {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-bottom: 10vh;
+        }
+
+        .page03>.left>.left,
+        .page03>.left>.right,
+        .page03>.right>.left,
+        .page03>.right>.right {
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+
+        .page03>.left>.left,
+        .page03>.right>.right {
+            width: 167px;
+            height: 233px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .page03>.left>.right,
+        .page03>.right>.left {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            padding: 3vh
+        }
+
+        .page03 .left .title,
+        .page03 .right .title {
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.5;
+            letter-spacing: 1.2px;
+        }
+
+        .page03 .left .sub,
+        .page03 .right .sub{
+            color: gray;
+            font-weight: 600;
+            font-size: .9rem;
+            line-height: 1.5;
+            letter-spacing: 1.2px;
+        }
+
+        .page03 .pinpoint .left {
+            background-image: url('./assets/pinpoint.png');
+        }
+
+        .page03 .HistoricalTrack .right {
+            background-image: url('./assets/Historical_track.png');
+        }
+
+        .page03 .BabyForum .left {
+            background-image: url('./assets/Baby_Forum.png')
+        }
+
+        .page03 .publicWelfare .right {
+            background-image: url('./assets/public_welfare.png')
+        }
+
+        .page03 .SecurityGuard .left {
+            background-image: url('./assets/Security_guard.png')
+        }
+
+        .page04 {
+            background-color: #f6fafd;
+            height: 40vh;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+        }
+        .page04 .center {
+            text-align: center;
+            -webkit-box-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            /* justify-content: space-between; */
+        }
+        .page04 .center .title { 
+            font-weight: bold;
+            font-size: .9rem;
+            text-align: center;
+            line-height: 1.2;
+            letter-spacing: 1.2px;
+            margin: 5vh 0;
+        }
+        .page04 .center .sub {
+            margin: 1vh 0;
+            color: gray;
+            font-weight: 600;
+            font-size: .5rem;
+            line-height: 1.5;
+            letter-spacing: 1.2px;
+        }
+        .page04 .left {
+            background-image: url('./assets/download_left.png');
+        }
+
+        .page04 .right {
+            background-image: url('./assets/download_right.png');
+        }
+        .page04 .qrcode {
+            width: 120px;
+            height: 120px;
+            background-image: url('./assets/qrcode.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .page05 {
+            background-color: #f6fafd;
+            text-align: center;
+        }
+        .page05 .sub {
+            padding: 1vh 0;
+            color: gray;
+            font-size: .6rem;
+            line-height: 18px;
+        }
+        .page05 .sub .ghs {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background-image: url('./assets/ghs.png');
+            color: rgba(0,0,0,0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page page01">
+        <div class="left bg"></div>
+        <div class="center">
+            <p class="title">阿布跑跑智能鞋垫，是根据数万家长与孩子的使用需求，潜心研发，推出的一款针对儿童与家长的软硬件集合的儿童智能鞋垫。</p>
+            <div class="buttons">
+                <a class="button download" href="http://android.myapp.com/myapp/detail.htm?apkName=com.gcs.mcj.insole&ADTAG=mobile" target="_blank">立即下载</a>
+                <a class="button shopping" href="https://m.abpao.com" target="_blank">阿布商城</a>
+            </div>
+            <div class="homePage"></div>
+        </div>
+        <div class="right bg"></div>
+    </div>
+    <div class="page page02">
+        <div class="left">
+            <p>阿布跑跑操作简单，可查询设备的实时位置并在地图上显示，准确定位孩子所在位置，为你带来了便捷式的定位服务功能，让家长随时随地了解孩子去向。</p>
+        </div>
+        <div class="right">
+        </div>
+    </div>
+    <div class="page page03">
+        <p class="title">阿布跑跑功能介绍</p>
+        <div class="left pinpoint">
+            <div class="left"></div>
+            <div class="right">
+                <p class="title">精准定位</p>
+                <p class="sub">鞋垫内置定位芯片通过融合专业级5重定位模式时刻追踪定位。</p>
+            </div>
+        </div>
+        <div class="right HistoricalTrack">
+            <div class="left">
+                <p class="title">历史轨迹</p>
+                <p class="sub">可以查询行走路线和停留的时间随时掌握TA的安全。</p>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="left BabyForum">
+            <div class="left"></div>
+            <div class="right">
+                <p class="title">宝宝论坛</p>
+                <p class="sub">打开阿布跑跑APP关注模板，了解与宝宝相关的母婴知识。</p>
+            </div>
+        </div>
+        <div class="right publicWelfare">
+            <div class="left">
+                <p class="title">阿布公益</p>
+                <p class="sub">全国各地的打拐民警，及时更新失踪儿童信息，并通过新媒体，迅速通知周边群众民警快速寻找和侦破。</p>
+            </div>
+            <div class="right"></div>
+        </div>
+        <div class="left SecurityGuard">
+            <div class="left"></div>
+            <div class="right">
+                <p class="title">安全守护</p>
+                <p class="sub">可设置电子围栏，给孩子一个安全活动区域，超出设定安全区域，将发生警报信息至您的手机APP及时发现孩子去向。</p>
+            </div>
+        </div>
+    </div>
+    <div class="paeg page04">
+        <div class="left bg"></div>
+        <div class="center">
+            <div class="titleContainer">
+                <p class="title">下载阿布跑跑APP</p>
+                <p class="sub">微信小程序”阿布跑跑“直接使用</p>
+                <P class="sub">扫描二维码下载体验更多功能</p>
+            </div>
+          
+            <div class="qrcode"></div>
+        </div>
+        <div class="right bg"></div>
+    </div>
+    <div class="page page05">
+        <p class="sub">温州鞋都网络科技有限公司 Copyright © 2016-2018 备案号浙ICP备17053632号 <span class="ghs">ghs</span></p>
+    </div>
+</body>
+
+</html>
